@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app-info
+  name: app-info
+  namespace: app-info
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-info
+  template:
+    metadata:
+      labels:
+        app: app-info
+    spec:
+      containers:
+      - image: quay.io/apoczeka/app-info:latest
+        name: httpd
+        ports:
+        - containerPort: 8080
