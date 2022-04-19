@@ -1,1 +1,1 @@
-# example-source
+# app-info
